@@ -1,0 +1,147 @@
+/* css stylesheet for about page */
+/* color palette is Whimsical Hues from coolors.co with minor changes */
+
+
+/* color palette */
+/* create the font and color variables inside root element for global access */
+:root{
+    --seashell: #FFF1EC;        /* seashell */
+    --light-cyan: #CDE6E5;      /* light cyan */
+    --tropical-teal: #58A299;   /*tropical teal*/
+    --taupe-grey: #6A5F5C;           /* taupe grey */
+    --peach-fuzz: #FAD4C0;      /* peach fuzz */ 
+    
+    /* set courier new as the main font with courier and monospace as fallbacks if courier new fails to load */
+    --main-font: "Courier New", Courier, monospace; 
+    /* set times new roman as the secondary font with times and serif as fallbacks */
+    --secondary-font: "Times New Roman", Times, serif;
+}
+
+/* styling for the body of the webpage*/
+
+body{
+    /* seashell - page background color; (variable defined inside the root above is called) */
+    background-color: var(--seashell);
+    /* no margin for the body so that content can use all available space */
+    margin: 0;
+}
+
+/* styling for the webpage's container */
+
+#container{
+    /* center div technique (from class lecture CSS part 2); set left and right margins of the div container to auto, and this tells the browser to maintain an equal distances on the right and left */
+    margin:0px auto;
+    width:100%;
+}
+
+/* styling for header elements */
+
+header{
+    /* light cyan - header background color (this makes it look like a bar at the top of the page */
+    background-color: var(--light-cyan);
+    /* turn the header into a flexbox, so that header elements can be placed next to each other horizontally rather than just vertically */
+    display: flex;
+    /* keeps the content evenly spaced out with the first and last elements being placed at their corresponding edges */
+    justify-content: space-between;
+    /* aligns items vertically */
+    align-items: center;
+    /* sets the width to 100% of available space so that the header can spread across the entire width of the screen */
+    width: 100%;
+    /* set header fonts to the secondary font defined in the root element */
+    font-family: var(--secondary-font);
+}
+
+/* applies to element with header-site-name id */
+#header-site-name{
+    /* add a margin of 28px so that the heading text is not placed at the very edge */
+    margin: 28px;
+    /* makes the heading text larger */
+    font-size: 300%;
+    /* tropical teal - heading text color */
+    color: var(--tropical-teal);
+}
+
+/* applies to element with header-page-name id */
+#header-page-name{
+    /* add a margin of 28px so that the heading text is not placed at the very edge */
+    margin: 28px;
+    /* makes the heading text larger (but still slightly smaller than the main heading (site name) */
+    font-size: 270%;
+    /* tropical teal - heading text color */
+    color: var(--tropical-teal);
+}
+
+/* styling for main section of the webpage */
+
+#main{
+    /* set the margin of the main content container to 70 pixels all around; this gives the main content breathing room around the edges and header */
+    margin: 70px;
+    font-family: var(--main-font);
+}
+
+/* styling for headers in the main section */
+.main-header{
+    /* set font size to 245% (smaller than header text, but larger than paragraph content) */
+    font-size: 245%;
+    /* set main content header color to tropical teal */
+    color: var(--tropical-teal)
+}
+
+/* styling for paragraph content in the main section */
+.main-content{
+    /* set font size to 210% (smaller than main content headers) */
+    font-size: 210%;
+    /* set font color to taupe grey */
+    color: var(--taupe-grey);
+}
+
+/* styling for footer */
+
+footer{
+    /* light cyan - footer background color (this makes it look like a bar at the bottom of the page */
+    background-color: var(--light-cyan);
+    /* turn the footer into a flexbox, so that footer elements can be placed next to each other horizontally rather than just vertically */
+    display: flex;
+    /* keeps the content to the left side */
+    justify-content: left;
+    /* aligns items vertically */
+    align-items: center;
+    /* sets the width to 100% of available space so that the footer can spread across the entire width of the screen */
+    width: 100%;
+    /* set footer fonts to the secondary font defined in the root element */
+    font-family: var(--secondary-font);
+}
+
+/* styling for github logo inside the footer */
+#github-logo-image{
+    /* set image margin to 21 pixels */
+    margin: 21px;
+    font-family: var(--secondary-font);
+    
+}
+
+/* styling for github profile link inside the footer */
+#github-link{
+    /* set link font size to 245%*/
+    font-size: 245%;
+    /* make the link text bold */
+    font-weight: bold;
+}
+
+/* github link styling for when the link is unvisited */
+#github-link:link{
+    /* set color to taupe grey when link is unvisited */
+    color: var(--taupe-grey);
+}
+
+/* github link styling for when the link is visited */
+#github-link:visited{
+    /* set color to tropical teal when link is visited */
+    color: var(--tropical-teal);
+}
+
+/* github link styling for when the link is hovered over */
+#github-link:hover{
+    /* set color to seashell when link is hovered over */
+    color: var(--seashell);
+}
