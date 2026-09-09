@@ -98,17 +98,17 @@ header{
 /* styling for footer */
 
 footer{
-    /* light cyan - header background color (this makes it look like a bar at the top of the page */
+    /* light cyan - footer background color (this makes it look like a bar at the bottom of the page */
     background-color: var(--light-cyan);
-    /* turn the header into a flexbox, so that header elements can be placed next to each other horizontally rather than just vertically */
+    /* turn the footer into a flexbox, so that footer elements can be placed next to each other horizontally rather than just vertically */
     display: flex;
-    /* keeps the content evenly spaced out with the first and last elements being placed at their corresponding edges */
+    /* keeps the content to the left side */
     justify-content: left;
     /* aligns items vertically */
     align-items: center;
-    /* sets the width to 100% of available space so that the header can spread across the entire width of the screen */
+    /* sets the width to 100% of available space so that the footer can spread across the entire width of the screen */
     width: 100%;
-    /* set header fonts to the secondary font defined in the root element */
+    /* set footer fonts to the secondary font defined in the root element */
     font-family: var(--secondary-font);
 }
 
