@@ -76,9 +76,77 @@ header{
 #main{
     /* set the margin of the main content container to 70 pixels all around; this gives the main content breathing room around the edges and header */
     margin: 70px;
+    /* set the font family to the main font */
     font-family: var(--main-font);
+    /* turn the main container into a flexbox */
+    display: flex;
+    /* stack items in a row */
+    flex-direction: row;
+    /* create space between the nav bar and the main content */
+    gap: 100px;
 }
 
+#vertical-navbar{
+    /* set initial width to 250px without growth or shrinkage */
+    flex: 0 0 250px;
+    /* set the bg color to peach fuzz */
+    background-color: var(--peach-fuzz);
+    /* padding inside the navbar */
+    padding: 30px;
+    /* give the navbar a rounded border */
+    border-radius: 12px;
+    /* include padding and borders in sizing (250px) for predictable sizing */
+    box-sizing: border-box;
+    /* keep height of the navbar fitted to its content height */
+    height: fit-content;
+    /* sticks the navbar in place at the top left of the screen */
+    position: sticky;
+    /* keeps the navbar in the top left corner so that the user can always access it */
+    top: 40px;
+}
+
+/* remove the default bullet points from the list in the vertical navbar */
+#vertical-navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#vertical-navbar li{
+    /* adds space between nav items */
+    margin-bottom: 49px;
+}
+
+/* style the navigation links */
+#vertical-navbar a.main-content {
+    /* set font size to 150% */
+    font-size: 150%;
+    /* removes underline decoration */
+    text-decoration: none;
+    /* set nav item text to bold */
+    font-weight: bold;
+    /* make the entire clickable area of the nav link expand to fill the width of the side bar*/
+    display: block;
+    /* fade into new color instead of snapping */
+    transition: color 0.3s ease;
+}
+
+/* hover effect for navigation links */
+#vertical-navbar a.main-content:hover {
+    color: var(--seashell);
+}
+
+/* styling for the main text content wrapper (turn into a flexbox) */
+#main-content-wrapper {
+    /* take up the remaining available space */
+    flex: 1;
+}
+
+/* adds extra spacing between content sections for readability */
+#main-content-wrapper .main-content {
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
 /* styling for headers in the main section */
 .main-header{
     /* set font size to 245% (smaller than header text, but larger than paragraph content) */
