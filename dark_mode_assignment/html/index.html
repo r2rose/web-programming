@@ -1,0 +1,105 @@
+<!-- about us page -->
+<!-- doctype declaration - lets browser know what document type to expect -->
+<!DOCTYPE html>
+<!-- html opening tag - all html code for the page needs to go inside these tags; the language has also been set to english -->
+<html lang="en">
+<!-- opening head tag; this block will hold the metadata for the webpage-->
+<head>
+    <!-- this line links the external stylesheet to the html code -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- let browser knwo which character set to use -->
+    <meta charset="UTF-8">
+    <!-- set the page to follow the width of the device, and set the initial scalle to 1 (when page is first loaded) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this is the title of the webpage. it will appear on the browser tab -->
+    <title>Easelly</title>
+</head>
+<body>
+    <!-- container for the main webpage content-->
+        <div id="main-container">
+
+            <!-- [HEADER] -->
+            <header>
+                <!-- header container for styling -->
+                <div id="header-container">
+                    <!-- header title (app name) -->
+                    <div id="header-title">
+                            Easelly
+                    </div>
+
+                    <!-- container holding nav links -->
+                    <div id="header-nav-contents">
+                        <!-- theme toggle -->
+                        <div class="theme-toggle">
+                                <button id="theme-toggle-btn">
+                                    Change Theme
+                                </button>
+                        </div>
+
+                        <!-- user authentication buttons (in progress) -->
+                        <div class="authentication-action-buttons">
+                                <button id="sign-up-button" class="nav-item">
+                                    Sign Up
+                                </button>
+                                <button id="sign-in-button" class="nav-item">
+                                    Sign In
+                                </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- [HEADER END] -->
+
+            <!-- [MAIN CONTENT]-->
+            <main>
+                <!-- main content container -->
+                <div id="main-content-container">
+                    <!-- card 1 -->
+                    <div class="feature-card">
+                        <img src="../img/sloth.png" alt="sloth picture with reference grid over it" class="card-img">
+                        <h3>
+                            Built-In Tools
+                        </h3>
+                        <p>
+                            Enjoy utilities purpose-made for creatives like a reference grid maker!
+                        </p>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="feature-card">
+                        <img src="../img/museum_wall.jpg" alt="person looking at artworks on a museum wall" class="card-img">
+                        <h3>
+                            Artistic Freedom
+                        </h3>
+                        <p>
+                            Freely customize your profile and posts!
+                        </p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="feature-card">
+                        <img src="../img/painting.jpg" alt="watercolor painting" class="card-img">
+                        <h3>
+                            Explore
+                        </h3>
+                        <p>
+                            Explore art from other creatives through our feed and get inspired with our challenges!
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <!-- [MAIN CONTENT END] -->
+
+            <!-- [FOOTER] -->
+            <footer>
+                <div class="footer-item">
+                    <img src="../img/GitHub_Invertocat_Black_Clearspace.svg" alt="github logo" id="github-logo-image">
+                    <a href="https://github.com/r2rose" class="footer-link">Visit my Github!</a>
+                </div>
+                <div class="footer-item">
+                    <a href="../html/about.html" class="footer-link">About Us</a>
+                </div>
+            </footer>
+            <!-- [FOOTER END] -->
+        </div>
+    <script src="../js/dark_mode.js"></script>
+</body>
+</html>
