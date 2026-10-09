@@ -1,0 +1,214 @@
+/* css stylesheet for landing page */
+
+/* color palette */
+/* create the font and color variables inside root element for global access */
+:root{
+    --alice-blue: #E6F4FF;  /* alice blue - site background */
+    --fresh-sky: #5fa8d3;   /* fresh sky */
+    --peach-fuzz: #fad4c0;  /* peach fuzz */
+    --white: #ffffff; 
+    --black: #000000;
+    
+    /* set courier new as the main font with courier and monospace as fallbacks if courier new fails to load */
+    --main-font: "Courier New", Courier, monospace; 
+    /* set times new roman as the secondary font with times and serif as fallbacks */
+    --secondary-font: "Times New Roman", Times, serif;
+}
+
+.dark_mode{
+    --alice-blue: #121820; /* dark mode replacement for alice blue */
+    --fresh-sky: #275678; /* dark mode replacement for fresh sky */
+    --peach-fuzz: #c48877; /* dark mode replacement for peach fuzz */
+    --white: #16202c; /* darken card bg */
+    --black: #ffffff;
+}
+
+/* styling for the body of the webpage */
+body{
+    /* alice blue - page background color; (variable defined inside the root above is called) */
+    background-color: var(--alice-blue);
+    /* no margin for the body so that content can use all available space */
+    margin: 0px;
+}
+
+/* styling for the header container */
+#header-container{
+    /* turn the header into a flexbox, so that header elements can be placed next to each other horizontally rather than just vertically */
+    display: flex;
+    /* keeps the content evenly spaced out with the first and last elements being placed at their corresponding edges */
+    justify-content: space-between;
+    /* align items vertically */
+    align-items: center;
+    /* sets the width to 100% of available space so that the header can spread across the entire width of the screen */
+    width: 100%;
+    /* prevents problems where padding makes items go past the screen width */
+    box-sizing: border-box;
+    /* add a padding of 28px so that the heading items are not placed at the very edge */
+    padding: 28px;
+    /* set header fonts to the secondary font defined in the root element */
+    font-family: var(--secondary-font);
+    /* set font color */
+    color: var(--black);
+}
+
+header{
+    /* set bg color */
+    background: var(--fresh-sky);
+}
+
+/* styling for header title (app name) */
+#header-title{
+    /* makes the heading text larger */
+    font-size: 370%;
+}
+
+/* styling for the nav contents container */
+#header-nav-contents{
+    /* make the container a flexbox, so elements line up horizontally */
+    display: flex;
+    /* create an even space between items */
+    justify-content: space-between;
+    /* create a gap between the theme toggle and sign up buttons (each their own div) */
+    gap: 28px;
+    
+}
+
+/* styling for header buttons */
+#header-nav-contents button{
+    /* set background color */
+    background-color: var(--peach-fuzz);
+    /* create rounded corners */
+    border-radius: 7px;
+    /* apply padding for button's inner text */
+    padding: 7px;
+    /* make font larger */
+    font-size: 150%;
+    /* prevents problems where padding makes items go past the screen width */
+    box-sizing: border-box;
+    /* align items vertically */
+    align-items: center;
+    /* set font color */
+    color: var(--black);
+}
+#header-nav-contents button:hover {
+    /* on hover, make the button color alice blue */
+    background-color: var(--alice-blue);
+    /* slight lift effect */
+    transform: translateY(-3px);
+}
+
+#main-content-container{
+    /* center div technique (from class lecture CSS part 2); set left and right margins of the div container to auto, and this tells the browser to maintain an equal distances on the right and left */
+    margin:0px auto;
+    /* set width to entire screen size */
+    width:100%;
+    /* make this a flexbox */
+    display: flex;
+    /* space items evenly */
+    justify-content: space-evenly;
+    /* align items to the center */
+    align-items: center;
+    /* apply a padding */
+    padding: 70px;
+    /* prevents problems where padding makes items go past the screen width */
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+.feature-card {
+    /* set card background color to white */
+    background-color: var(--white);
+    /* add a border */
+    border: 1px solid var(--peach-fuzz);
+    /* round corners */
+    border-radius: 14px;
+    /* apply padding */
+    padding-inline: 28px;
+    padding-block: 49px;
+    /* set the cards' width and height*/
+    width: 500px;
+    height: 700px;
+    /* make cards a flexbox */
+    display: flex;
+    /* stack items vertically */
+    flex-direction: column;
+    /* space items evenly from the start */
+    justify-content: flex-start;
+    /* apply a consistent gap */
+    gap: 21px;
+    /* center content horizontally */
+    align-items: center; 
+    /* center text*/
+    text-align: center;
+    /* make text larger */
+    font-size: 170%;
+    /* set font color */
+    color: var(--black);
+}
+
+/* make images inside the feature cards to stay small and neat */
+.feature-card img {
+    /* set img width and height */
+    width: 370px;
+    height: 370px;
+    /* do not warp the image, rather crop it */
+    object-fit: cover;
+
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+/* styling for footer */
+
+footer{
+    /* fresh sky - footer background color (this makes it look like a bar at the bottom of the page */
+    background-color: var(--fresh-sky);
+    /* turn the footer into a flexbox, so that footer elements can be placed next to each other horizontally rather than just vertically */
+    display: flex;
+    /* add a gap */
+    gap: 35px;
+    /* align items from the start of the container */
+    justify-content: flex-start;
+    /* aligns items vertically */
+    align-items: center;
+    /* prevents problems where padding makes items go past the screen width */
+    box-sizing: border-box;
+    /* sets the width to 100% of available space so that the footer can spread across the entire width of the screen */
+    width: 100%;
+    /* set footer fonts to the secondary font defined in the root element */
+    font-family: var(--secondary-font);
+}
+
+/* style the footer items */
+.footer-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/* styling for github logo inside the footer */
+#github-logo-image{
+    /* set image margin to 21 pixels */
+    margin: 7px;
+    font-family: var(--secondary-font);
+    
+}
+
+/* styling for github profile link inside the footer */
+.footer-link{
+    /* set link font size to 245%*/
+    font-size: 270%;
+    /* make the link text bold */
+    font-weight: bold;
+}
+
+/* github link styling for when the link is visited */
+.footer-link:visited{
+    /* set color to black (unchanged) when link is visited */
+    color: var(--black);
+}
+
+/* github link styling for when the link is hovered over */
+.footer-link:hover{
+    /* set color to alice blue when link is hovered over */
+    color: var(--alice-blue);
+}
